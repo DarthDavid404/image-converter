@@ -1,0 +1,213 @@
+header {
+    background-color: black;
+    width: 100%;
+    
+    
+
+}
+
+.main_container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#headerrow_1 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 2%;
+}
+
+#headerrow_2 {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 2%;
+    color: white;
+
+}
+
+#headerrow_3 {
+    width: 100%;
+}
+
+.flex-align-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+#upload_button {
+    background-color: green;
+    box-shadow: 1px 42x rgba(0, 0, 0, 0.753);
+    color: white;
+    padding: 1%;
+    border-radius: 8px;
+    border: 2px solid green;
+    margin-top: 5%;
+}
+
+#upload_button:hover {
+    background-color: rgb(1, 82, 1);
+    color: white;
+    padding: 1%;
+    border-radius: 8px;
+    border: none;
+    margin-top: 5%;
+}
+
+
+
+.custom_width {
+    width: 100px;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.remove_file {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.card-width {
+    height: 70px;
+    max-width: 1200px;
+    margin-top: 5%;
+}
+
+.file_converter {
+    display: flex;
+    flex-direction: column;
+    min-width: 800px;
+    max-width: 1450px;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logout_button {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 0.5%;
+    border-radius: 2px;
+    border: 1px solid black;
+    margin-top: 1%;
+    margin-left: 1%;
+
+}
+
+.logout_button:hover {
+background-color: rgba(212, 212, 212, 0.829);
+border: none;
+}
+
+.convert_button {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 1%;
+        border-radius: 4px;
+        border: 1px solid black;
+        margin-top: 5%;
+        margin-left: 1%;
+
+}
+
+.convert_button:hover {
+    background-color: rgba(34, 34, 34, 0.829);
+    border: none;
+}
+
+.filetype {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.hide {
+    display: none;
+}
+
+.redText {
+    color: red
+}
+
+/* unvisited link */
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a#logout:active {
+    color: black;
+    text-decoration: none;
+  }
+  
+  a#logout:link {
+    color: black;
+    text-decoration: none;;
+  }
+  
+  /* visited link */
+  a#logout {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a#logout:hover {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a#logout:active {
+    color: black;
+    text-decoration: none;
+  }
+
+ .imagesContainer {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+    ;
+ }
+
+ .marginImages {
+    margin: 1%;
+ }

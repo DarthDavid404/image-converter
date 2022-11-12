@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/login_register_style.css')}}">
+
+
+
+    <title>Login and Registration Form</title>
+</head>
+<body>
+    <div class="content_wrapper">
+    <div class="description">
+        <h1>Sign up to convert images!</h1>
+    </div>
+    <div class="forms">
+    <form action="/register_user" method="POST">
+        <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill in this form to create an account.</p>
+        
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email">
+        <p class="red_bold_flashed">{% with errors = get_flashed_messages(category_filter=['email_invalid']) %}
+            {% if errors %}
+                {%-for msg in errors %}
+                {{msg}}
+                {% endfor-%}
+            {% endif %}
+            {% endwith %}
+        </p>
+        <p class="red_bold_flashed">{% with errors = get_flashed_messages(category_filter=['email_invalid_taken']) %}
+            {% if errors %}
+                {%-for msg in errors %}
+                {{msg}}
+                {% endfor-%}
+            {% endif %}
+            {% endwith %}
+        </p>
+        
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password">
+        <p class="red_bold_flashed">{% with errors = get_flashed_messages(category_filter=['password_less_than_six']) %}
+            {% if errors %}
+                {%-for msg in errors %}
+                {{msg}}
+                {% endfor-%}
+            {% endif %}
+            {% endwith %}
+        </p>
+    
+        <label for="confirm_password"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="confirm_password" >
+        <p class="red_bold_flashed">{% with errors = get_flashed_messages(category_filter=['confirm_password']) %}
+            {% if errors %}
+                {%-for msg in errors %}
+                {{msg}}
+                {% endfor-%}
+            {% endif %}
+            {% endwith %}
+        </p>
+    
+
+        <div class="clearfix">
+            <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+    </div>
+    </form>
+    <h2>Or</h2>
+    <form action="/login_user" method="POST">
+        <div class="container">
+        <h1>Log in</h1>
+        <hr>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email">
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" >
+        <p>{% with errors = get_flashed_messages(category_filter=['invalid_password']) %}
+        {% if errors %}
+            {%-for msg in errors %}
+            {{msg}}
+            {% endfor-%}
+        {% endif %}
+        {% endwith %}
+    </p>
+        
+
+        <div class="clearfix">
+
+            <button type="submit" class="signupbtn">Log in</button>
+        </div>
+    </div>
+    </form>
+</div>
+</div>
+</body>
+</html>
