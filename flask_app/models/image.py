@@ -49,7 +49,3 @@ class Img:
         query = 'DELETE from image where id = %(id)s'
         
         return connectToMySQL(db).query_db(query, data)
-        
-
-        
-       
